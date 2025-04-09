@@ -1,24 +1,32 @@
 class Flavor:
 
     def __init__(self, name:str, flavor: str, price_per_scoop: float):
-    # TODO: replace pass with your code
+        self.__name = name
+        self.__flavor = flavor
+        self.__price_per_scoop = price_per_scoop
         pass
 
 
-    # TODO: add properties to that class to access the private attributes, 
-    #       however make sure the private attributes are not changable.
-    
     @property
     def name(self):
-        # TODO: replace pass with your code
-        pass
+        return self.__name
 
     @property
     def flavor(self):
-        # TODO: replace pass with your code
-        pass
+        return self.__flavor
 
     @property
     def price_per_scoop(self):
-        # TODO: replace pass with your code
-        pass
+        return self.__price_per_scoop
+    
+    @property
+    def name(self):
+        return self.__name
+
+    @property
+    def flavor(self):
+        return self.__flavor
+
+    @property
+    def price_per_scoop(self):
+        return self.__price_per_scoop
