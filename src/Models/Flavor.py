@@ -6,7 +6,6 @@ class Flavor:
         self.__price_per_scoop = price_per_scoop
         pass
 
-
     @property
     def name(self):
         return self.__name
