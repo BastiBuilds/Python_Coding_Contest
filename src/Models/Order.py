@@ -1,14 +1,19 @@
+from datetime import datetime
+from Models.Cone import Cone
+
 class Order:
-
     def __init__(self):
-        # TODO: replace pass with your code
-        #       create an datetime object with datetime.now()
-        #       create an empty list for the cones in the object
-        pass
+        self.__created_at = datetime.now()
+        self.__cones = []
+        @property
+        def created_at(self):
+            return self.__created_at
 
-    # TODO: add properties to that class to access the private attributes, 
-    #       however make sure the private attributes are not changable.
+        @property
+        def cones(self):
+            return self.__cones
 
     def add_item(self, item: Cone):
-        # TODO: replace pass with your code
-        pass
+        if not isinstance(item, Cone):
+            raise TypeError("item must be an instance of Cone")
+        self.__cones.append(item)
