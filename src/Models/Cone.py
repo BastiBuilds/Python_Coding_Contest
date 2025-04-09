@@ -1,14 +1,17 @@
+from Models.Flavor import Flavor
+
 class Cone:
     def __init__(self):
-        # TODO: replace pass with your code
-        #       create a empty list for the scoops in the object
-        pass        
+        self._scoops = []
 
-    # TODO: add properties to that class to access the private attributes, 
-    #       however make sure the private attributes are not changable.
+    @property
+    def scoops(self):
+        return self._scoops
 
     def add_flavor(self, flavor: Flavor):
-        # TODO: replace pass with your code, check how many are already added and only add 
-        #       if there are less than 3
-        #       otherwise print an error or raise an exception
-        pass
+        if not hasattr(self, '_scoops'):
+            self._scoops = []
+        if len(self._scoops) < 3:
+            self._scoops.append(flavor)
+        else:
+            raise ValueError("Cannot add more than 3 scoops to the cone.")
